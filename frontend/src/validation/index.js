@@ -77,6 +77,7 @@ export const SIGNUP_VALIDATION = Yup.object().shape({
     .required("Required"),
 });
 
+
 export const CREATE_POST_VALIDATION = Yup.object().shape({
   caption: Yup.string().required("Required"),
 });

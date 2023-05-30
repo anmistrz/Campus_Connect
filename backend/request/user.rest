@@ -1,0 +1,168 @@
+### GET USERS
+GET http://localhost:8080/users?page=1&limit=20
+### GET USERS (name,idUserUniversitas,userType)
+GET http://localhost:8080/users?page=1&limit=10&idUserUniversitas=1&userType=mahasiswa&name=mahasiswa1-1
+### GET USERS (idUserUniversitas,userType)
+GET http://localhost:8080/users?page=1&limit=10&idUserUniversitas=1&userType=mahasiswa&order=users.created_at desc
+
+
+
+### GET USERS (idUserOrganisasi,userType,Name+Nama Jabatan)
+GET http://localhost:8080/users?page=1&limit=1&idUserOrganisasi=3&userType=mahasiswa&order=users.created_at desc
+
+### GET USERS (idUserOrganisasi,userType)
+GET http://localhost:8080/users?page=1&limit=1&idUserOrganisasi=3&userType=mahasiswa&order=users.created_at desc
+
+### GET USERS (name)
+GET http://localhost:8080/users?page=1&limit=2&name=admi
+### GET USERS (isVerified)
+GET http://localhost:8080/users?page=1&limit=10&userType=universitas&isVerified=true
+### GET USERS
+GET http://localhost:8080/users?page=1&limit=10&userType=universitas
+
+
+### GET USER
+GET http://localhost:8080/users/1
+
+### CREATE USER ADMIN
+POST http://localhost:8080/users
+content-type: application/json
+
+{
+    "name": "admin1",
+    "email": "admin1@mail.com",
+    "userType":"admin",
+    "password":"1234"
+}
+### CREATE USER MAHASISWA
+POST http://localhost:8080/users
+content-type: application/json
+
+{
+    "name": "yudis",
+    "email": "yudistir4maulana@gmail.com",
+    "userType":"mahasiswa",
+
+    "semester": 3,
+    "nim": "1029102",
+    "statusMahasiswa": "aktif",
+    "idUserUniversitas": 1,
+    "universitas": "Universitas Merdeka",
+    "idFakultas":1,
+    "idProdi":1
+
+}
+### UPDATE USER MAHASISWA
+PUT http://localhost:8080/users/3
+content-type: application/json
+
+{
+    "name": "mahasiswa1-2 updae",
+    "email": "mahasiswa1-2@mail.com",
+    "userType":"mahasiswa",
+
+    "semester": 3,
+    "nim": "mahasiswa1-2",
+    "statusMahasiswa": "aktif",
+    "idUserUniversitas": 1,
+    "universitas": "Universitas1",
+    "idFakultas":3,
+    "idProdi":5,
+
+    "idMahasiswa":1
+
+
+    
+}
+
+### CREATE USER ORGANISASI
+POST http://localhost:8080/users
+content-type: application/json
+
+{
+    "name": "Badan Eksekutif Mahasiswa Univ Merdeka",
+    "email": "bem1@mail.com",
+    "userType":"organisasi",
+    "idUserUniversitas": 1,
+    "universitas": "Universitas Merdeka"
+}
+### UPDATE USER ORGANISASI
+PUT http://localhost:8080/users/5
+content-type: application/json
+
+{
+    "name": "Badan Eksekutif Mahasiswa Univ Merdeka",
+    "email": "bem1@mail.com",
+    "userType":"organisasi",
+    "idUserUniversitas": 1,
+    "universitas": "Universitas Merdeka",
+
+    "idOrganisasi":1
+    
+}
+
+### CREATE USER UNIVERSITAS
+POST http://localhost:8080/users
+content-type: application/json
+
+{
+    "name": "Universitas Gajah Mada",
+    "email": "ugm@mail.com",
+    "password": "1234",
+    "userType":"universitas",
+
+    "namaRektor" :"Komeng",
+	"ktpRektor"  :"dummyktp.jpg",
+	"isVerified" :true,
+	"alamat"     :"jakarta sumedang"
+     
+}
+### UPDATE USER UNIVERSITAS
+PUT http://localhost:8080/users/1
+content-type: application/json
+
+{
+    "name": "Universitas Merdeka",
+    "email": "UniversitasMerdeka@mail.com",
+    "userType":"universitas", 
+	"isVerified" :false
+	 
+     
+}
+
+### SIGN UP
+POST http://localhost:8080/users
+content-type: application/json
+
+{
+}
+
+### UPDATE USER PROFILE
+PUT http://localhost:8080/users/1
+content-type: application/json
+
+{
+    "email"    :"ase@mail.com",             
+	"bio"      :"Lorem asdfasdf",     
+	"link"     :"",
+	"profilepic"     :"",
+	"whatsapp" :"",
+    "linkedin" :""
+}
+
+### DELETE USER
+DELETE http://localhost:8080/users/7
+### DELETE USERS
+DELETE http://localhost:8080/users
+
+
+# ----------- Jabatan ----------
+
+
+
+ 
+
+ 
+
+### DELETE JABATAN
+DELETE http://localhost:8080/users/10/jabatan

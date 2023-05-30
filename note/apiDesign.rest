@@ -1,0 +1,17 @@
+// !USER
+GET /users                              => get All Users 
+GET /users?nama=rizki&page=1&limit=10   => get Users with querys
+GET /users/:id                          => get single user by id
+PUT /users/:id                          => update single user by id
+POST /users/login                       => login
+POST /users/signup                      => create user 
+DELETE /users/:id                       => delete single user by id
+
+
+// !POST
+GET /posts                              => get All post 
+GET /posts?isNews=true&sort=+createdAt  => get posts with querys
+GET /posts/:id                          => get single post by id
+PUT /posts/:id                          => update single post by id
+POST /posts                             => create post 
+DELETE /posts/:id                       => delete single post by id

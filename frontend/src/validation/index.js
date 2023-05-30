@@ -52,6 +52,7 @@ export const STRUKTUR_ORGANISASI_VALIDATION = Yup.object().shape({
   namaOrganisasi: Yup.string().required("Required"), //mahasiswa ,organisasi, universitas, admin
 });
 
+
 export const CHANGE_PASSWORD_VALIDATION = Yup.object().shape({
   oldPassword: Yup.string().required("Required"),
   newPassword: Yup.string().required("Required"),

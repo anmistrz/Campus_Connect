@@ -59,6 +59,7 @@ export const CHANGE_PASSWORD_VALIDATION = Yup.object().shape({
     .oneOf([Yup.ref("newPassword"), null], "Passwords didnt match")
     .required("Required"),
 });
+
 export const SIGNUP_VALIDATION = Yup.object().shape({
   name: Yup.string().required("Required"),
   alamat: Yup.string().required("Required"),

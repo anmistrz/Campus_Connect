@@ -3,10 +3,12 @@ import * as Yup from "yup";
 export const FAKULTAS_VALIDATION = Yup.object().shape({
   namaFakultas: Yup.string().required("Required"),
 });
+
 export const PRODI_VALIDATION = Yup.object().shape({
   idFakultas: Yup.number().typeError("required").required("Required"),
   namaProdi: Yup.string().required("Required"),
 });
+
 export const MAHASISWA_VALIDATION = Yup.object().shape({
   name: Yup.string().required("Required"),
   nim: Yup.string().required("Required"),
@@ -20,6 +22,7 @@ export const MAHASISWA_VALIDATION = Yup.object().shape({
   userType: Yup.string().required("Required"), //mahasiswa ,organisasi, universitas, admin
   idUserUniversitas: Yup.number().required("Required"),
 });
+
 export const PROFILE_VALIDATION = Yup.object().shape({
   name: Yup.string().required("Required"),
   bio: Yup.string(),
@@ -38,12 +41,14 @@ export const PROFILE_VALIDATION = Yup.object().shape({
   // userType: Yup.string().required("Required"), //mahasiswa ,organisasi, universitas, admin
   // idUserUniversitas: Yup.number().required("Required"),
 });
+
 export const ORGANISASI_VALIDATION = Yup.object().shape({
   name: Yup.string().required("Required"),
   email: Yup.string().email().required("Required"),
   userType: Yup.string().required("Required"), //mahasiswa ,organisasi, universitas, admin
   idUserUniversitas: Yup.number().required("Required"),
 });
+
 export const STRUKTUR_ORGANISASI_VALIDATION = Yup.object().shape({
   idUserOrganisasi: Yup.number().typeError("required").required("Required"),
   // idMahasiswa: Yup.number().typeError("required").required("Required"),
